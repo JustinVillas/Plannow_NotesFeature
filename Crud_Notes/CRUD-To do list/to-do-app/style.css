@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  font-family: sans-serif;
+  margin: 0;
+  background-color: #e5e5e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.app {
+  position: relative;
+  background-color: #fff;
+  width: 1200px;
+  min-height: 100vh;
+  padding: 20px;
+  overflow-y: scroll;
+
+}
+
+.app::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+#addNew {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #000000;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.fa-plus {
+  padding: 3px;
+  border-radius: 3px;
+}
+
+#tasks {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+#tasks div {
+  border: 3px solid #000000;
+  background-color: #f5f5f5;
+  border-radius: 6px;
+  padding: 5px;
+  display: grid;
+  gap: 4px;
+}
+
+#tasks div .options {
+  justify-self: center;
+  display: flex;
+  gap: 20px;
+}
+
+#tasks div .options i {
+  cursor: pointer;
+}
+
+#msg {
+  color: red;
+}
+
+.row {
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid #e5e5e5;
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-weight: 14px;
+}
+
+button {
+  font-size: 14px;
+  padding: 5px 10px;
+  border: none;
+  outline: none;
+  background: #ff5f4e;
+  color: #fff;
+  cursor: pointer;
+}
+
+ul li {
+  list-style: none;
+  font-size: 15px;
+  padding: 10px 8px 5px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50px;
+  background-image: url(https://cdn3.iconfinder.com/data/icons/arrows-160/96/uncheckedV_circle-512.png);
+  background-size: cover;
+  background-position: center;
+  top: 10px;
+  left: 8px;
+}
+
+ul li.checked {
+  color: #555;
+}
+
+ul li.checked::before {
+  background-image: url(https://png.pngtree.com/element_our/sm/20180515/sm_5afb099b4844b.jpg);
+}
+
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 8;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50px;
+}
+
+ul li span:hover {
+  background: #edeef0;
+}
